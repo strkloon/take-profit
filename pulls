@@ -1,0 +1,6 @@
+Title: Fix Android workflow errors
+
+This PR moves runner and secrets usage to contexts supported at the job and step levels, decodes an optional keystore, and guards instrumented tests with a secret flag.
+
+Changes:
+- .github/workflows/android-build.yml: use job-level runner.temp, valid secrets checks, add keystore decode and gradle.properties creation, cache Gradle, upload artifacts.
