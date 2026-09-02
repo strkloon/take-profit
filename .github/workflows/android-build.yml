@@ -10,6 +10,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
+      # runner.temp is only available at the job/run time; keep it in job env (not workflow-level)
       ANDROID_SDK_ROOT: ${{ runner.temp }}/android-sdk
     steps:
       - name: Checkout
